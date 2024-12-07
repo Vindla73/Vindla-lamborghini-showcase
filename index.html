@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamborghini Experience</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/auth.css">
+    <link rel="stylesheet" href="styles/slideshow.css">
+</head>
+<body>
+    <div id="auth-container">
+        <div id="login-form" class="auth-form">
+            <h2>Login</h2>
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="toggleForms()">Register</a></p>
+        </div>
+
+        <div id="register-form" class="auth-form hidden">
+            <h2>Register</h2>
+            <input type="text" id="register-name" placeholder="Full Name" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <button onclick="register()">Register</button>
+            <p>Already have an account? <a href="#" onclick="toggleForms()">Login</a></p>
+        </div>
+    </div>
+
+    <div id="content" class="hidden">
+        <header>
+            <h1>Lamborghini Showcase</h1>
+	    <button onclick="Home()" class="Home-btn">Home</button>
+	    <button onclick="Models()" class="Models-btn">Models</button>
+	    <select>
+ 		 <option value="option1">Aventador</option>
+  		 <option value="option2">Gallardo</option>
+ 		 <option value="option3">Diablo</option>
+	    </select>
+            <button onclick="About Us()" class="About Us-btn">About Us</button>
+            <button onclick="Contact Us()" class="Contact Us-btn">Contact Us</button>
+	    <button onclick="logout()" class="logout-btn">logout</button>
+        </header>
+	
+
+        <div class="slideshow-container">
+            <div class="slides"></div>
+            <button class="prev" onclick="changeSlide(-1)">❮</button>
+            <button class="next" onclick="changeSlide(1)">❯</button>
+        </div>
+    </div>
+
+    <script src="js/auth.js"></script>
+    <script src="js/slideshow.js"></script>
+</body>
+</html>
